@@ -30,15 +30,18 @@ class NotifyHooks
 	 */
 	public function generatePage($objPage, &$objLayout)
 	{
-		if (!$objLayout->addNotify || !$GLOBALS['TL_CONFIG']['notifySocketioUrl']) {
+		if (!$objLayout->addNotify || !$GLOBALS['TL_CONFIG']['notifySocketioUrl'])
+		{
 			return;
 		}
 
 		$strScript = "<script src='".$GLOBALS['TL_CONFIG']['notifySocketioUrl']."socket.io/socket.io.js'>window.socket = io.connect('".$GLOBALS['TL_CONFIG']['notifySocketioUrl']."');</script>\n";
 
-		if ($objLayout->head) {
+		if ($objLayout->head)
+		{
 			$objLayout->head = $strScript . $objLayout->head;
-		} else {
+		} else
+		{
 			$objLayout->head = $strScript;
 		}
 	}

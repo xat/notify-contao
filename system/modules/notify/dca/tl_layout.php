@@ -12,7 +12,8 @@
 
 $GLOBALS['TL_DCA']['tl_layout']['palettes'] = str_replace(',head;', ',head,addNotify;', $GLOBALS['TL_DCA']['tl_layout']['palettes']);
 
-$GLOBALS['TL_DCA']['tl_layout']['fields']['addNotify'] = array(
+$GLOBALS['TL_DCA']['tl_layout']['fields']['addNotify'] = array
+(
 	'label'                   => &$GLOBALS['TL_LANG']['tl_layout']['addNotify'],
 	'exclude'                 => true,
 	'inputType'               => 'checkbox',
