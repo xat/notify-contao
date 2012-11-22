@@ -10,7 +10,7 @@ Code sample Serverside:
 
 ```php
 // load the notify Class
-$this->import('Notify');
+$this->Import('Notify');
 
 // Emit an event
 $this->Notify->emit('awesome', array('Something awesome just happend in the backend!'));
